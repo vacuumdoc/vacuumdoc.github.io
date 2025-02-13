@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Done Diligently, Donediligently, DoneDiligently, done diligently, donediligently github,...">
+    <meta name="description" content="technical support">
+    <title>Vacuum Doc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+header {
+            background-color: #000000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            color: #FFFFFF;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #000000; /* Blue color - you can adjust this */
+            color: white; /* Text color - adjust as needed */}
+        
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vacuum Doc.</h1>
+    
+       <button onclick="navigateTo('about.html')">About Me</button>
+    
+    <button onclick="window.open('https://github.com/Vacuumrepair?tab=repositories', '_blank')">GitHub</button>
+
+    <button onclick="navigateTo('comeingsoon.html')">Page Coming Soon</button>
+</header>
+
+<h2 style="color: black; font-family: Dancing Script; font-size: 1em; text-align: center;">I can repair any old vacuum</h2>
+    
+
+ <img src="3.jpeg" alt="Your Picture">
+<h3>To contact me you can either click the "SMS” or "Email" button. And I will get back to you.</h3>
+
+    <div style="text-align: center;">
+<button onclick="sendMessage()">SMS</button>
+
+
+ <button onclick="sendEmail()">Email</button>
+</div>
+
+<footer>
+        <h4>&copy; 2050 vacuum repairs</h4>
+</footer>
+    
+    <script>
+        function navigateTo(page) {
+            try {
+                // Attempt to navigate to the specified page
+                window.location.href = page;
+            } catch (error) {
+                // Handle any errors that occur during navigation
+                console.error("An error occurred while trying to navigate:", error);
+                alert("Sorry, we encountered an issue while trying to navigate. Please try again later.");
+            }
+        }
+    </script>
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function sendEmail() {
+        const email = 'id372066@duck.com';
+        const subject = 'Inquiry';
+        const body = 'Hello, I would like to get in touch.';
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        try {
+            window.location.href = mailtoLink;
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('There was an error trying to send the email. Please try again later.');
+        }
+    }
+</script>
+<script>
+        function sendMessage() {
+            const phoneNumber = "(999)-999-9999";
+            const message = "Hello, I would like to get in touch. ";
+            const url = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
+
+            try {
+                // Attempt to open the SMS application
+                window.location.href = url;
+            } catch (error) {
+                console.error("Error sending message:", error);
+                alert("An error occurred while trying to send the message. Please try again.");
+            }
+        }
+    </script>
+    
+        
+        <script>
+        function openUrl() {
+            const url = "https://github.com/Vacuumrepair?tab=repositories";
+            try {
+                window.open(url, '_blank');
+            } catch (error) {
+                console.error("An error occurred while trying to open the URL:", error);
+                alert("Failed to open the URL. Please check your browser settings.");
+            }
+        }
+    </script>
+</body>
+</html>
